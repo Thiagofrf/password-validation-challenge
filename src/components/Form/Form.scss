@@ -1,0 +1,90 @@
+@import '../../styles/variables.scss';
+
+.c-form {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 5%;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        fieldset {
+            border: none;
+        }
+
+        &--input {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 5px;
+            border: 1px solid $black;
+
+            &-errors {
+                display: flex;
+                flex-direction: column;
+                margin-top: 24px;
+                color: $c-invalid;
+
+                li {
+                    margin-left: 40px;
+                }
+            }
+
+            &-error {
+                display: flex;
+                flex-direction: column;
+                color: $c-invalid;
+                margin-top: 6px;
+            }
+
+            &-valid {
+                margin-top: 24px;
+                color: $c-valid;
+            }
+        }
+
+        &--submit-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 16px;
+            margin-top: 32px;
+            
+            @media only screen and (min-width: 768px) {
+                gap: 32px;
+                flex-direction: row;
+            }
+        }
+
+        &--submit {
+            width: 100%;
+            padding: 10px;
+
+            @media only screen and (min-width: 768px) {
+                width: 20%;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &--result {
+            &-positive {
+                color: $c-valid;
+            }
+
+            &-negative {
+                color: $c-invalid;
+            }
+        }
+        
+    }
+}
